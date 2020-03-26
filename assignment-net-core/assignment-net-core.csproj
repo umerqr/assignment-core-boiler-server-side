@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>assignment_net_core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200317184227_InitialCommit.cs" />
+    <Compile Remove="Migrations\20200317184227_InitialCommit.Designer.cs" />
+    <Compile Remove="Migrations\20200317185104_InitialCommit.cs" />
+    <Compile Remove="Migrations\20200317185104_InitialCommit.Designer.cs" />
+    <Compile Remove="Migrations\20200317190650_InitialCommit.cs" />
+    <Compile Remove="Migrations\20200317190650_InitialCommit.Designer.cs" />
+    <Compile Remove="Migrations\20200317191540_InitialCommit.cs" />
+    <Compile Remove="Migrations\20200317191540_InitialCommit.Designer.cs" />
+    <Compile Remove="Migrations\20200317191615_InitialCommit.cs" />
+    <Compile Remove="Migrations\20200317191615_InitialCommit.Designer.cs" />
+    <Compile Remove="Migrations\20200318074504_InitialCommit.cs" />
+    <Compile Remove="Migrations\20200318074504_InitialCommit.Designer.cs" />
+    <Compile Remove="Migrations\20200318080115_InitialCommit.cs" />
+    <Compile Remove="Migrations\20200318080115_InitialCommit.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="ReflectionIT.Mvc.Paging" Version="4.0.0" />
+  </ItemGroup>
+
+
+</Project>
