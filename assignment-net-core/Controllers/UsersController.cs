@@ -36,11 +36,16 @@ namespace assignment_net_core.Controllers
             return await PaginatedList<UserRow>.CreateAsync(users, initialPage, 10);
         }
 
-        // GET: api/Users/5
+        // GET: api/Users/search
         [HttpGet("{search}")]
         public async Task<ActionResult<User>> GetUser(string search)
         {
-            var user = await _context.Users.Where(x => x.Name.StartsWith(search)).ToListAsync();
+            var user = _context.Users.Where(x => x.Name.StartsWith(search)).Include(c => c.Tricks).Select(x => new UserRow()
+            {
+                Id = x.Id,
+                Name = x.Name,
+                TrickCount = x.Tricks.Count
+            }).OrderBy(o => o.Id);
 
             if (user == null)
             {

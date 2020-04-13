@@ -123,16 +123,16 @@ namespace assignment_net_core.Controllers
 
         public async Task<ActionResult<IEnumerable<Trick>>> Tricks()
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 1; i < 101; i++)
             {
 
 
             Trick trick = new Trick
             {
 
-                ChallengeId = 1,
+                ChallengeId = i,
                 Content = "A pretty good trick "+ i,
-                UserId = 1
+                UserId = i
             };
             _context.Tricks.Add(trick);
             _context.SaveChanges();
